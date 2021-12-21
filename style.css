@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --primary-one: hsl(215, 51%, 70%);
+    --primary-two: hsl(178, 100%, 50%);
+
+    --dark-blue-one: hsl(217, 54%, 11%);
+    --dark-blue-two: hsl(216, 50%, 16%);
+    --dark-blue-three: hsl(215, 32%, 27%);
+
+    --white: hsl(0, 0%, 100%);
+
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-600: 600;
+
+    --transition: 0.3s all ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--dark-blue-one);
+    font-family: 'Outfit', sans-serif ;
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-size: 18px;
+
+
+}
+
+/*---------card---------*/
+.card{
+    background: var(--dark-blue-two);
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    max-width: 400px;
+    max-height: auto;
+    border-radius: 20px;
+    box-shadow: 0 28px 16px 16px rgb(0 0 0 / 8%)
+}
+
+/* image container */
+
+.image-container{
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.card-image{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-image::after {
+    content: url(./images/icon-view.svg);
+    position: absolute;
+    inset: 0;
+    background: var(--primary-two);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition:all 0.3s ease-in-out;
+}
+
+.card-image:hover::after {opacity: 0.5;}
+
+.card-image img{
+    width: 100%;
+    display: block;
+
+}
+/* title */
+.title{
+    color: var(--white);
+    font-weight: var(--font-weight-600);
+    font-family: "Outfit" sans-serif ;
+    margin-left: 10px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.title:hover {
+    color: var(--primary-two);
+
+}
+.description{
+    color: var(--primary-one);
+    font-weight: var(--font-weight-300);
+    margin-left: 10px;
+}
+/* eth/price */
+.eth-img{
+    margin: 5px;
+}
+
+.price-and-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.price{
+    font-weight: var(--font-weight-600);
+    color: var(--primary-two);
+    margin-right: auto;
+
+
+}
+
+.eth-time{
+    margin: 5px;
+}
+
+.time{
+    color: var(--primary-one);
+    font-weight: var(--font-weight-400);
+
+}
+
+/*---------creation------------*/
+
+.creator{
+    display: flex;
+    margin: 1rem 0 1rem 0;
+}
+
+.avatar{
+    width: 40px;
+    border: 1px solid #FFFF;
+    border-radius: 100%;
+
+}
+
+p.author{
+    text-decoration: none;
+    color: var(--primary-one);
+    margin-left: 1.5rem;
+}
+
+span{
+    color: var(--white);
+    cursor: pointer;
+
+}
+
+span:hover {
+    color: var(--primary-two);
+}
+
+.line{
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 2px solid var(--dark-blue-three);
+}
+
+/* attribution */
+.attribution{
+    color: var(--white);
+    font-weight:var(--font-weight-400);
+    font-size: 15px;
+}
